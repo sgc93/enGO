@@ -12,8 +12,13 @@ function App() {
 function Header() {
 	return (
 		<div className="header">
-			<h1>🎒Pack</h1>
-			<h4>Your Items Properly</h4>
+			<div className="logo">
+				<img src="assets/images/logo.png" alt="logo"></img>
+			</div>
+			<div className="slogan">
+				<h1>🎒Pack</h1>
+				<h4>Your Items Properly</h4>
+			</div>
 		</div>
 	);
 }
