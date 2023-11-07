@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 const initialItems = [
-	{ id: 1, description: "Passports", quantity: 2, packed: false },
-	{ id: 2, description: "Socks", quantity: 12, packed: true },
+	{ id: 1, description: "Passports", quantity: 2, packed: true },
+	{ id: 2, description: "Socks", quantity: 12, packed: false },
 	{ id: 3, description: "Back Bag", quantity: 2, packed: true },
 	{ id: 4, description: "Candles", quantity: 22, packed: false },
 ];
@@ -105,10 +105,15 @@ function PackingList({ items, onDeleteItem }) {
 }
 
 function Item({ item, onDeleteItem }) {
+	const [isChecked, SetIsChecked] = useState(item.packed);
 	return (
 		<li>
-			<input type="checkbox"></input>
-			<span style={item.packed ? { textDecoration: "line-through" } : {}}>
+			<input
+				type="checkbox"
+				checked={isChecked}
+				onChange={() => SetIsChecked(!isChecked)}
+			></input>
+			<span style={isChecked ? { textDecoration: "line-through" } : {}}>
 				{item.quantity} {item.description}
 			</span>
 			<button onClick={() => onDeleteItem(item.id)}>❌</button>
