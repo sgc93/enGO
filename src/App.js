@@ -27,7 +27,10 @@ function App() {
 	}
 
 	function clearPackingList() {
-		setItems((items) => []);
+		const confirmed = window.confirm(
+			"Do you want to delete all items in packing list?"
+		);
+		if (confirmed) setItems((items) => []);
 	}
 
 	return (
