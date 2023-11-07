@@ -31,15 +31,16 @@ function Header() {
 function Form() {
 	return (
 		<form className="add-form">
-			<h3>What do you need for your trip?</h3>
-			<input type="text" placeholder="Item..." />
-			<select>
-				{Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
-					<option value={num} key={num}>
-						{num}
-					</option>
-				))}
-			</select>
+			<div className="input-item">
+				<input type="text" placeholder="What do you need for your trip?" />
+				<select>
+					{Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
+						<option value={num} key={num}>
+							{num}
+						</option>
+					))}
+				</select>
+			</div>
 			<button>Add</button>
 		</form>
 	);
