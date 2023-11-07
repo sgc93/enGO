@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Form } from "./form.js";
 import { Header } from "./header.js";
 import { Stats } from "./stats.js";
+import { Item } from "./item.js";
 
 const initialItems = [
 	{ id: 1, description: "Passports", quantity: 2, packed: true },
@@ -89,23 +90,6 @@ function PackingList({ items, onDeleteItem, onPacking, onClearList }) {
 				))}
 			</ul>
 		</div>
-	);
-}
-
-function Item({ item, onDeleteItem, onPacking }) {
-	// const [isChecked, SetIsChecked] = useState(item.packed);
-	return (
-		<li>
-			<input
-				type="checkbox"
-				checked={item.packed}
-				onChange={() => onPacking(item.id)}
-			></input>
-			<span style={item.packed ? { textDecoration: "line-through" } : {}}>
-				{item.quantity} {item.description}
-			</span>
-			<button onClick={() => onDeleteItem(item.id)}>❌</button>
-		</li>
 	);
 }
 
