@@ -86,6 +86,11 @@ body {
 	margin: 1rem;
 }
 
+.input-item select:focus {
+	outline: none;
+	border: none;
+}
+
 .input-item input {
 	background-color: transparent;
 	width: 80%;
@@ -132,6 +137,15 @@ input {
 	font-size: 1.4rem;
 	font-weight: 700;
 	margin: 0 0.8rem;
+}
+
+.list select {
+	background-color: #7ba5c6;
+}
+
+.list select:focus {
+	outline: none;
+	border: none;
 }
 
 .list ul {
