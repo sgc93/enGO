@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Header } from "./header.js";
 
 const initialItems = [
 	{ id: 1, description: "Passports", quantity: 2, packed: true },
@@ -44,20 +45,6 @@ function App() {
 				onClearList={clearPackingList}
 			/>
 			<Stats items={items} />
-		</div>
-	);
-}
-
-function Header() {
-	return (
-		<div className="header">
-			<div className="logo">
-				<img src="assets/images/logo.png" alt="logo"></img>
-			</div>
-			<div className="slogan">
-				<h1>🎒Pack</h1>
-				<h4>Your Items Properly</h4>
-			</div>
 		</div>
 	);
 }
