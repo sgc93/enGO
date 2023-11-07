@@ -9,11 +9,14 @@ const initialItems = [
 
 function App() {
 	const [items, setItems] = useState(initialItems);
+	function addNewItem(item) {
+		setItems((items) => [...items, item]);
+	}
 
 	return (
 		<div className="app">
 			<Header />
-			<Form setItems={setItems} />
+			<Form onAddItem={addNewItem} />
 			<PackingList items={items} />
 			<Stats />
 		</div>
@@ -34,13 +37,10 @@ function Header() {
 	);
 }
 
-function Form({ setItems }) {
+function Form({ onAddItem }) {
 	const [itemDescription, setItemDescription] = useState("");
 	const [quantity, setQuantity] = useState(1);
 
-	function addNewItem(item) {
-		setItems((items) => [...items, item]);
-	}
 	function handleSubmit(e) {
 		e.preventDefault();
 		if (itemDescription === "") return;
@@ -52,7 +52,7 @@ function Form({ setItems }) {
 			packed: false,
 		};
 
-		addNewItem(newItem);
+		onAddItem(newItem);
 
 		setItemDescription("");
 		setQuantity(1);
