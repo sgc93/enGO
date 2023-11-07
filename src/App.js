@@ -8,11 +8,13 @@ const initialItems = [
 ];
 
 function App() {
+	const [items, setItems] = useState(initialItems);
+
 	return (
 		<div className="app">
 			<Header />
-			<Form />
-			<PackingList />
+			<Form setItems={setItems} />
+			<PackingList items={items} />
 			<Stats />
 		</div>
 	);
@@ -32,9 +34,13 @@ function Header() {
 	);
 }
 
-function Form() {
+function Form({ setItems }) {
 	const [itemDescription, setItemDescription] = useState("");
 	const [quantity, setQuantity] = useState(1);
+
+	function addNewItem(item) {
+		setItems((items) => [...items, item]);
+	}
 	function handleSubmit(e) {
 		e.preventDefault();
 		if (itemDescription === "") return;
@@ -45,7 +51,8 @@ function Form() {
 			quantity: quantity,
 			packed: false,
 		};
-		console.log(newItem);
+
+		addNewItem(newItem);
 
 		setItemDescription("");
 		setQuantity(1);
@@ -80,11 +87,11 @@ function Form() {
 	);
 }
 
-function PackingList() {
+function PackingList({ items }) {
 	return (
 		<div className="list">
 			<ul>
-				{initialItems.map((item) => (
+				{items.map((item) => (
 					<Item item={item} key={item.id} />
 				))}
 			</ul>
