@@ -106,6 +106,13 @@ function Form({ onAddItem }) {
 function PackingList({ items, onDeleteItem, onPacking }) {
 	return (
 		<div className="list">
+			<div className="actions">
+				<select>
+					<option value="input">sort by input status</option>
+					<option value="description">Sort by item description</option>
+					<option>Sort by Packed Status</option>
+				</select>
+			</div>
 			<ul>
 				{items.map((item) => (
 					<Item
