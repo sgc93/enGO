@@ -104,10 +104,14 @@ function Form({ onAddItem }) {
 }
 
 function PackingList({ items, onDeleteItem, onPacking }) {
+	const [sort, setSort] = useState("sort by input status");
 	return (
 		<div className="list">
 			<div className="actions">
-				<select>
+				<select
+					value={sort}
+					onChange={(e) => setSort((sort) => e.target.value)}
+				>
 					<option value="input">sort by input status</option>
 					<option value="description">Sort by item description</option>
 					<option>Sort by Packed Status</option>
