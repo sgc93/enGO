@@ -16,7 +16,7 @@ enGO is a simple and intuitive web application built with React.js, designed to 
 
 ## Demo
 
-Check out the live demo of enGO [here]().
+Check out the live demo of enGO [https://engopacking.netlify.app)](https://engopacking.netlify.app).
 
 ## Screenshots + simple mockup
 
@@ -39,7 +39,7 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](https://github.com/sgc93/enGO/blob/main/LICENSE) file for details.
 
 ## Contact
 
