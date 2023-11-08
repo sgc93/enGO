@@ -20,7 +20,8 @@ Check out the live demo of enGO [here]().
 
 ## Screenshots + simple mockup
 
-
+![enGO Mockup](https://github.com/sgc93/enGO/blob/main/public/assets/screenshots/enGO-mokeup.png) <br><br>
+![enGO Screenshot](https://github.com/sgc93/enGO/blob/main/public/assets/screenshots/enGO-screenshot.png)
 
 ## Installation
 
