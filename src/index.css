@@ -26,9 +26,8 @@ body {
 }
 
 .header {
-	width: 100vw;
 	height: 45vh;
-	background: url("3.jpg");
+	background: url("header_bg.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -67,18 +66,13 @@ body {
 	gap: 0.8rem;
 }
 
-/* h3 {
-	margin-right: 1.6rem;
-	font-size: 2.4rem;
-} */
-
 .input-item {
 	color: #21293b;
 	background-color: #92b0c8;
 	border-radius: 10rem;
 	display: flex;
 	justify-content: space-between;
-	width: 70vw;
+	width: 500px;
 }
 
 .input-item select {
@@ -128,6 +122,7 @@ input {
 	flex-direction: column;
 	gap: 3.2rem;
 	align-items: center;
+	min-height: 29vh;
 }
 
 .actions button,
