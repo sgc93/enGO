@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Form } from "./form.js";
 import { Header } from "./header.js";
-import { Stats } from "./stats.js";
 import { PackingList } from "./packingList.js";
+import { Stats } from "./stats.js";
 
 const initialItems = [
 	{ id: 1, description: "Passports", quantity: 2, packed: true },
@@ -10,6 +10,16 @@ const initialItems = [
 	{ id: 3, description: "Back Bag", quantity: 2, packed: true },
 	{ id: 4, description: "Candles", quantity: 22, packed: false },
 ];
+
+function Color() {
+	return (
+		<section>
+			<div className="color">🚗</div>
+			<div className="color">🗺️</div>
+			<div className="color">🧭</div>
+		</section>
+	);
+}
 
 function App() {
 	const [items, setItems] = useState(initialItems);
@@ -39,6 +49,7 @@ function App() {
 
 	return (
 		<div className="app">
+			<Color />
 			<Header />
 			<Form onAddItem={addNewItem} />
 			<PackingList
