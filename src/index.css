@@ -14,9 +14,46 @@ body {
 	font-size: 2.4rem;
 	font-family: sans-serif;
 	color: #5a3e2b;
-	background-color: #cbdfff;
+	background: linear-gradient(289deg, #000, #343a42);
+
 	font-family: "Quicksand";
 	font-weight: 500;
+}
+
+section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section .color {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10rem;
+	position: absolute;
+	filter: blur(200px);
+}
+section .color:nth-child(1) {
+	top: -350px;
+	width: 600px;
+	height: 600px;
+	background: #ff35bf;
+}
+
+section .color:nth-child(2) {
+	bottom: -150px;
+	left: 100px;
+	width: 500px;
+	height: 500px;
+	background: #fffd87;
+}
+
+section .color:nth-child(3) {
+	bottom: 50px;
+	right: 100px;
+	width: 300px;
+	height: 300px;
+	background: #00d2ff;
 }
 
 .app {
@@ -25,15 +62,12 @@ body {
 	flex-direction: column;
 }
 
+/* Header */
+
 .header {
-	height: 45vh;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	text-align: center;
 	padding: 5rem;
 	color: white;
-	transition: ease-in 1.3s;
 }
 
 .logo {
