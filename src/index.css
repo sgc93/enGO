@@ -14,11 +14,13 @@ body {
 	font-size: 2.4rem;
 	font-family: sans-serif;
 	color: #5a3e2b;
-	background: linear-gradient(289deg, #000, #343a42);
+	background: linear-gradient(289deg, #2d2d2d, #343a42);
 
 	font-family: "Quicksand";
 	font-weight: 500;
 }
+
+/* Color full blur */
 
 section {
 	display: flex;
@@ -31,21 +33,21 @@ section .color {
 	justify-content: center;
 	font-size: 10rem;
 	position: absolute;
-	filter: blur(200px);
+	filter: blur(500px);
 }
 section .color:nth-child(1) {
 	top: -350px;
 	width: 600px;
 	height: 600px;
-	background: #ff35bf;
+	background: #9388e6;
 }
 
 section .color:nth-child(2) {
-	bottom: -150px;
-	left: 100px;
+	bottom: -350px;
+	left: -100px;
 	width: 500px;
 	height: 500px;
-	background: #fffd87;
+	background: #ceab4c;
 }
 
 section .color:nth-child(3) {
@@ -53,21 +55,15 @@ section .color:nth-child(3) {
 	right: 100px;
 	width: 300px;
 	height: 300px;
-	background: #00d2ff;
-}
-
-.app {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
+	background: #59cce6;
 }
 
 /* Header */
 
 .header {
-	text-align: center;
+	min-height: 100vh;
 	padding: 5rem;
-	color: white;
+	display: flex;
 }
 
 .logo {
@@ -78,19 +74,62 @@ section .color:nth-child(3) {
 	width: 100%;
 }
 
-.slogan h1 {
-	text-align: center;
-	font-family: "Monoton";
-	text-transform: uppercase;
-	font-weight: 400;
-	word-spacing: 30px;
-	letter-spacing: 5px;
+.header__content {
+	width: 80%;
+	height: 80%;
+
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10rem;
 }
 
-.slogan h3 {
-	text-transform: uppercase;
-	font-weight: 400;
+.header__content-title {
+	text-align: center;
+	color: rgb(255, 255, 255);
 }
+
+.header__content-title h1 {
+	align-self: self-start;
+	font-family: "Monoton";
+	text-transform: uppercase;
+	font-size: 6.5rem;
+	font-weight: 500;
+	word-spacing: 30px;
+	letter-spacing: 20px;
+}
+
+.header__content-title h4 {
+	text-transform: capitalize;
+	font-size: 3.9rem;
+	font-weight: 800;
+}
+
+.header__content-btn a {
+	text-decoration: none;
+	padding: 1rem 3rem;
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 2.5rem 4.5rem rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(2px);
+
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: capitalize;
+
+	transition: 0.3s ease;
+}
+
+.header__content-btn a:hover {
+	transform: translateY(-3px);
+}
+
+/* form */
 
 .add-form {
 	padding: 2.8rem 0;
