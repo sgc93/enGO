@@ -51,14 +51,16 @@ function App() {
 		<div className="app">
 			<Color />
 			<Header />
-			<Form onAddItem={addNewItem} />
-			<PackingList
-				items={items}
-				onDeleteItem={deleteItem}
-				onPacking={handleToggle}
-				onClearList={clearPackingList}
-			/>
-			<Stats items={items} />
+			<div className="packing__box" id="Packing">
+				<Form onAddItem={addNewItem} />
+				<PackingList
+					items={items}
+					onDeleteItem={deleteItem}
+					onPacking={handleToggle}
+					onClearList={clearPackingList}
+				/>
+				<Stats items={items} />
+			</div>
 		</div>
 	);
 }
