@@ -139,11 +139,11 @@ section .color:nth-child(3) {
 	font-weight: 500;
 	border: none;
 	background: transparent;
+	color: #ffffff;
 }
 
 .input-item select {
 	margin: 1rem;
-	color: #ffffff;
 	border: none;
 	outline: none;
 }
@@ -159,7 +159,6 @@ section .color:nth-child(3) {
 	width: 300px;
 	border-left: 1px solid white;
 	outline: none;
-
 	padding: 0.5rem 1rem;
 }
 
