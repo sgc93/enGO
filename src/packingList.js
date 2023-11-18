@@ -26,7 +26,9 @@ export function PackingList({ items, onDeleteItem, onPacking, onClearList }) {
 					<option value="description">Sort by item description</option>
 					<option value="packed">Sort by Packed Status</option>
 				</select>
-				<button onClick={onClearList}>clear</button>
+				<button onClick={onClearList} className="glass__box">
+					clear
+				</button>
 			</div>
 			<ul>
 				{sortedItems.map((item) => (
