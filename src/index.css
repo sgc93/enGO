@@ -20,12 +20,12 @@ body {
 	font-weight: 500;
 }
 
-section {
+.color__box {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-section .color {
+.color {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -33,14 +33,14 @@ section .color {
 	position: absolute;
 	filter: blur(500px);
 }
-section .color:nth-child(1) {
+.color:nth-child(1) {
 	top: -350px;
 	width: 600px;
 	height: 600px;
 	background: #ff35bf;
 }
 
-section .color:nth-child(2) {
+.color:nth-child(2) {
 	bottom: -350px;
 	left: -100px;
 	width: 500px;
@@ -48,12 +48,74 @@ section .color:nth-child(2) {
 	background: #fffd87;
 }
 
-section .color:nth-child(3) {
+.color:nth-child(3) {
 	bottom: 50px;
 	right: 100px;
 	width: 300px;
 	height: 300px;
 	background: #00d2ff;
+}
+
+/* shape */
+
+.shape {
+	position: absolute;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 2.5rem 4.5rem rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	border-radius: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		transform: translateY(-40px);
+		filter: hue-rotate(0deg);
+	}
+	50% {
+		transform: translateY(40px);
+		filter: hue-rotate(360deg);
+	}
+}
+
+.shape:nth-child(1) {
+	font-size: 5rem;
+	top: 80vh;
+	right: 40vw;
+	width: 125px;
+	height: 125px;
+
+	animation-delay: -2s;
+}
+
+.shape:nth-child(2) {
+	font-size: 3rem;
+	top: 230px;
+	left: 110px;
+	width: 80px;
+	height: 80px;
+
+	animation-delay: -4s;
+}
+
+.shape:nth-child(3) {
+	font-size: 1.5rem;
+
+	top: 70px;
+	right: 210px;
+	width: 50px;
+	height: 50px;
+
+	animation-delay: -6s;
 }
 
 /* Header */
