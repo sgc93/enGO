@@ -10,7 +10,9 @@ export function Header() {
 					<h4>Your Items Properly</h4>
 				</div>
 				<div className="header__content-btn">
-					<a href="#Packing">Start Packing</a>
+					<a href="#Packing" className="glass__box">
+						Start Packing
+					</a>
 				</div>
 			</div>
 		</div>
