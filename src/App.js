@@ -13,10 +13,26 @@ const initialItems = [
 
 function Color() {
 	return (
-		<section>
+		<section className="color__box">
 			<div className="color">🚗</div>
 			<div className="color">🗺️</div>
 			<div className="color">🧭</div>
+		</section>
+	);
+}
+
+function Shape() {
+	return (
+		<section className="shape__box">
+			<div className="shape" style={{ i: "var(--i)" }}>
+				🚗
+			</div>
+			<div className="shape" style={{ i: "var(--ii)" }}>
+				🗺️
+			</div>
+			<div className="shape" style={{ i: "var(--iii)" }}>
+				🧭
+			</div>
 		</section>
 	);
 }
@@ -61,6 +77,7 @@ function App() {
 				/>
 				<Stats items={items} />
 			</div>
+			<Shape />
 		</div>
 	);
 }
