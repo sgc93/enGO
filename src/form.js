@@ -21,7 +21,7 @@ export function Form({ onAddItem }) {
 	}
 
 	return (
-		<form className="add-form" onSubmit={handleSubmit}>
+		<form className="add-form glass__box" onSubmit={handleSubmit}>
 			<div className="input-item">
 				<input
 					type="text"
@@ -44,7 +44,9 @@ export function Form({ onAddItem }) {
 					))}
 				</select>
 			</div>
-			<button type="submit">Add</button>
+			<button type="submit" className="glass__box">
+				Add
+			</button>
 		</form>
 	);
 }
