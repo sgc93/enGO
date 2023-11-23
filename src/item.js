@@ -1,7 +1,7 @@
 export function Item({ item, onDeleteItem, onPacking }) {
 	// const [isChecked, SetIsChecked] = useState(item.packed);
 	return (
-		<li>
+		<li className="glass__box">
 			<input
 				type="checkbox"
 				checked={item.packed}
