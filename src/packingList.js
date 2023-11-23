@@ -17,7 +17,7 @@ export function PackingList({ items, onDeleteItem, onPacking, onClearList }) {
 
 	return (
 		<div className="list">
-			<div className="actions">
+			<div className="actions glass__box">
 				<select
 					value={sortBy}
 					onChange={(e) => setSortBy((sortBy) => e.target.value)}

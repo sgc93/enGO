@@ -261,7 +261,14 @@ input {
 }
 
 .list select {
-	background-color: #7ba5c6;
+	background-color: transparent;
+	border: none;
+	color: white;
+	outline: none;
+}
+
+.list select option {
+	color: black;
 }
 
 .list select:focus {
