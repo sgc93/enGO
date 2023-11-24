@@ -21,7 +21,9 @@ Check out the live demo of enGO [https://engopacking.netlify.app)](https://engop
 ## Screenshots + simple mockup
 
 ![enGO Mockup](https://github.com/sgc93/enGO/blob/main/public/assets/screenshots/enGO-mokeup.png) <br><br>
-![enGO Screenshot](https://github.com/sgc93/enGO/blob/main/public/assets/screenshots/enGO-screenshot.png)
+![enGO Home Screenshot](https://github.com/sgc93/enGO/blob/main/public/assets/screenshots/enGO-home.png)
+![enGO Packing Screenshot](https://github.com/sgc93/enGO/blob/main/public/assets/screenshots/enGO-packing.png)
+![enGO Contact Screenshot](https://github.com/sgc93/enGO/blob/main/public/assets/screenshots/enGO-contact.png)
 
 ## Installation
 
@@ -31,7 +33,6 @@ To run enGO locally, follow these steps:
 2. Navigate to the project directory: `cd enGO`
 3. Install the dependencies: `npm install`
 4. Run the app: `npm start`
-
 
 ## Contributing
 
