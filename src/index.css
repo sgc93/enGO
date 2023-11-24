@@ -147,12 +147,72 @@ body::-webkit-scrollbar-track {
 	gap: 7rem;
 }
 
+.header__nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 .logo {
 	width: 10rem;
 }
 
 .logo img {
 	width: 100%;
+}
+
+.nav {
+	display: flex;
+}
+
+.nav a {
+	text-decoration: none;
+	color: white;
+	margin: 0rem 2rem;
+	padding: 1rem;
+
+	position: relative;
+}
+
+.nav a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(242, 5, 88, 0.88);
+
+	z-index: -1;
+
+	transition: transform 0.5s;
+	transform-origin: 0 0;
+	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+	transform: scaleX(0);
+}
+
+.nav .like::before {
+	border-radius: 1rem;
+	height: 100%;
+	clip-path: polygon(25% 0, 52% 25%, 75% 0, 100% 35%, 50% 100%, 0 35%);
+}
+
+.nav .contact::before {
+	border-radius: 1rem;
+	height: 100%;
+	clip-path: polygon(
+		0% 0%,
+		100% 0%,
+		100% 85%,
+		75% 85%,
+		75% 100%,
+		50% 85%,
+		0% 85%
+	);
+}
+
+.nav a:hover::before {
+	transform: scaleX(1);
 }
 
 .header__content {
@@ -382,9 +442,6 @@ input[type="checkbox"] {
 	text-transform: capitalize;
 
 	cursor: pointer;
-}
-
-@media screen and (max-width: 1050) {
 }
 
 @media screen and (max-width: 1050) {
