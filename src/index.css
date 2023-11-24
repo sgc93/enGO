@@ -13,11 +13,26 @@ html {
 body {
 	font-size: 2.4rem;
 	font-family: sans-serif;
-	color: #5a3e2b;
 	background: linear-gradient(289deg, #2d2d2d, #343a42);
 
 	font-family: "Quicksand";
 	font-weight: 500;
+	overflow: auto;
+}
+
+body::-webkit-scrollbar {
+	width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.214);
+	border: 1px solid white;
+	border-radius: 23px;
+	cursor: pointer;
+}
+
+body::-webkit-scrollbar-track {
+	background: linear-gradient(289deg, #2d2d2d, #343a42);
 }
 
 .color__box {
@@ -248,7 +263,6 @@ input {
 	flex-direction: column;
 	gap: 3.2rem;
 	align-items: center;
-	min-height: 29vh;
 }
 
 .actions button,
@@ -321,7 +335,10 @@ input[type="checkbox"] {
 }
 
 .stats {
-	background-color: #92b0c8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	text-align: center;
 	font-weight: 700;
 	padding: 3.2rem 0;
