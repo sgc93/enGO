@@ -12,7 +12,7 @@ export function Stats({ items }) {
 	const numOfPacked = items.filter((item) => item.packed).length;
 	const packedPercent = Math.round((numOfPacked / numOfItems) * 100);
 	return (
-		<footer className="stats">
+		<footer className="stats glass__box">
 			<em>
 				{packedPercent === 100
 					? `You have Packed all your ${numOfItems} Items, READY TO GO! ✈️🌍`

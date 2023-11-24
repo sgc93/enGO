@@ -335,13 +335,25 @@ input[type="checkbox"] {
 }
 
 .stats {
+	height: 100px;
+	width: 90vw;
+	position: fixed;
+	top: calc(100vh - 120px);
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
 	text-align: center;
-	font-weight: 700;
 	padding: 3.2rem 0;
+
+	backdrop-filter: blur(45px);
+	z-index: 999;
+}
+
+.stats em {
+	font-weight: 700;
+	color: white;
 }
 
 .glass__box {
@@ -352,7 +364,7 @@ input[type="checkbox"] {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	background: rgba(255, 255, 255, 0.1);
 	box-shadow: 0 2.5rem 4.5rem rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(2px);
+	backdrop-filter: blur(3px);
 
 	color: #fff;
 	font-size: 20px;
