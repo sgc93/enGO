@@ -15,7 +15,7 @@ export function PackingList({ items, onDeleteItem, onPacking, onClearList }) {
 		sortedItems = items.slice().sort((a, b) => a.packed - b.packed);
 	}
 
-	return (
+	return items.length ? (
 		<div className="list">
 			<div className="actions glass__box">
 				<select
@@ -41,5 +41,7 @@ export function PackingList({ items, onDeleteItem, onPacking, onClearList }) {
 				))}
 			</ul>
 		</div>
+	) : (
+		""
 	);
 }
