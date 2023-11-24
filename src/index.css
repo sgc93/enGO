@@ -17,7 +17,8 @@ body {
 
 	font-family: "Quicksand";
 	font-weight: 500;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -74,6 +75,7 @@ body::-webkit-scrollbar-track {
 /* shape */
 
 .shape {
+	width: fit-content;
 	position: absolute;
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -88,12 +90,13 @@ body::-webkit-scrollbar-track {
 	justify-content: center;
 
 	animation: animate 10s linear infinite;
+	z-index: -1;
 }
 
 @keyframes animate {
 	0%,
 	100% {
-		transform: translateY(-40px);
+		transform: translateY(-30px);
 		filter: hue-rotate(0deg);
 	}
 	50% {
@@ -104,8 +107,8 @@ body::-webkit-scrollbar-track {
 
 .shape:nth-child(1) {
 	font-size: 5rem;
-	top: 80vh;
-	right: 40vw;
+	top: 200px;
+	right: 5vw;
 	width: 125px;
 	height: 125px;
 
@@ -115,7 +118,7 @@ body::-webkit-scrollbar-track {
 .shape:nth-child(2) {
 	font-size: 3rem;
 	top: 230px;
-	left: 110px;
+	left: 10vw;
 	width: 80px;
 	height: 80px;
 
@@ -126,7 +129,7 @@ body::-webkit-scrollbar-track {
 	font-size: 1.5rem;
 
 	top: 70px;
-	right: 210px;
+	right: 50vw;
 	width: 50px;
 	height: 50px;
 
@@ -197,12 +200,11 @@ body::-webkit-scrollbar-track {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 	padding: 5rem;
 }
 
 .add-form {
-	width: max-content;
+	width: 600px;
 
 	display: flex;
 	align-items: center;
@@ -220,6 +222,7 @@ body::-webkit-scrollbar-track {
 }
 
 .input-item select {
+	width: fit-content;
 	margin: 1rem;
 	border: none;
 	outline: none;
@@ -263,6 +266,10 @@ input {
 	flex-direction: column;
 	gap: 3.2rem;
 	align-items: center;
+}
+
+.actions {
+	max-width: fit-content;
 }
 
 .actions button,
@@ -372,4 +379,13 @@ input[type="checkbox"] {
 	text-transform: capitalize;
 
 	cursor: pointer;
+}
+
+@media screen and (max-width: 1050) {
+}
+
+@media screen and (max-width: 1050) {
+}
+
+@media screen and (max-width: 1050) {
 }
