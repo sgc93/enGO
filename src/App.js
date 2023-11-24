@@ -6,10 +6,11 @@ import { PackingList } from "./packingList.js";
 import { Stats } from "./stats.js";
 
 const initialItems = [
-	{ id: 1, description: "Passports", quantity: 2, packed: true },
-	{ id: 2, description: "Socks", quantity: 12, packed: false },
+	{ id: 1, description: "Passports", quantity: 1, packed: true },
+	{ id: 2, description: "Socks", quantity: 5, packed: false },
 	{ id: 3, description: "Back Bag", quantity: 2, packed: true },
 	{ id: 4, description: "Candles", quantity: 22, packed: false },
+	{ id: 5, description: "Umbrella", quantity: 1, packed: true },
 ];
 
 function Color() {
