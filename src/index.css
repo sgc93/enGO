@@ -148,8 +148,9 @@ body::-webkit-scrollbar-track {
 }
 
 .header__nav {
+	position: relative;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 }
 
@@ -258,7 +259,8 @@ body::-webkit-scrollbar-track {
 /* form */
 
 .packing__box {
-	height: 100vh;
+	min-height: 1000px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -444,6 +446,51 @@ input[type="checkbox"] {
 	cursor: pointer;
 }
 
+.app__contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.app__contact-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+
+	width: fit-content;
+	height: fit-content;
+}
+
+.social {
+	width: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.social a {
+	text-decoration: none;
+}
+
+.social .icon {
+	font-size: 2.5rem;
+	color: #d7d7d7;
+	transition: 0.3s;
+}
+
+.icon:hover {
+	color: white;
+	transform: scale(1.3);
+}
+
+.email {
+	font-size: 1.6rem;
+}
 @media screen and (max-width: 1050) {
 }
 
