@@ -1,8 +1,18 @@
 export function Header() {
 	return (
 		<div className="header">
-			<div className="logo">
-				<img src="assets/images/logo.png" alt="logo"></img>
+			<div className="header__nav">
+				<div className="logo">
+					<img src="assets/images/logo.png" alt="logo"></img>
+				</div>
+				<div className="nav">
+					<a href="#Contact" className="contact">
+						Contact
+					</a>
+					<a href="https://github.com/sgc93/enGO" className="like">
+						Like
+					</a>
+				</div>
 			</div>
 			<div className="header__content">
 				<div className="header__content-title">
