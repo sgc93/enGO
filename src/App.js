@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Contact } from "./contact.js";
 import { Form } from "./form.js";
 import { Header } from "./header.js";
 import { PackingList } from "./packingList.js";
@@ -76,6 +77,7 @@ function App() {
 					onClearList={clearPackingList}
 				/>
 				<Stats items={items} />
+				<Contact />
 			</div>
 			<Shape />
 		</div>
